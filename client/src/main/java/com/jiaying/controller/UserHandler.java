@@ -29,6 +29,7 @@ public class UserHandler {
 
 
     @GetMapping("/count")
+    @ResponseBody
     public int count(){
         return userFeign.count();
     }

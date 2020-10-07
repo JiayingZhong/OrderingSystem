@@ -2,6 +2,9 @@
 *.idea
 .idea/*
 *.iml
+**/impl/
+
+
 
 # MacOS file
 *.DS_Store

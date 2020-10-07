@@ -1,12 +1,13 @@
 package com.jiaying.feign;
 
 import com.jiaying.entity.User;
+import com.jiaying.feign.impl.UserFeignError;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(value = "user")
+@FeignClient(value = "user", fallback = UserFeignError.class)
 public interface UserFeign {
 
     @GetMapping("/user/findAll/{index}/{limit}")
